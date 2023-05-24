@@ -1,13 +1,15 @@
-import fastty from 'fastify';
+import fastify from "fastify";
 
-const app = fastty();
+const app = fastify();
 
-app.get('/hello', ()=> {
-  return 'Hello World';
-})
+app.get("/hello", () => {
+  return "Hello World";
+});
 
-app.listen({
-  port: 3333
-}).then(() => {
-  console.log('💻 Server is running on port 3333 🚀');
-})
+app
+  .listen({
+    port: 3333,
+  })
+  .then(() => {
+    console.log("💻 Server is running on port 3333 🚀");
+  });
