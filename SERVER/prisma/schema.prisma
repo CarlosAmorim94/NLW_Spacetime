@@ -9,3 +9,9 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+// model é a "tabela" ou "collection", pois o prisma lida com DB SQL e NoSQL
+model User {
+  id   String @id @default(uuid()) // @id é a primary key dessa tabela
+  name String
+}
